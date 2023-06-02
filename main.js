@@ -1,3 +1,10 @@
+var image = document.getElementsByClassName("ifour");
+new simpleParallax(image, {
+  scale: 1.4,
+  delay: 0.3,
+  transition: "cubic-bezier(0,0,0,1)",
+});
+
 // faq
 const faqs = document.querySelectorAll(".faq");
 
@@ -94,20 +101,6 @@ ScrollTrigger.create({
   }),
   trigger: ".about-head",
   start: "top 80%",
-  ease: "power3.easeInOut",
-  // markers: true,
-});
-
-// projects
-ScrollTrigger.create({
-  animation: gsap.from(".project", {
-    stagger: 0.52,
-    duration: 1,
-    yPercent: -10,
-    opacity: 0,
-  }),
-  trigger: ".projects-heading",
-  start: "top 50%",
   ease: "power3.easeInOut",
   // markers: true,
 });
