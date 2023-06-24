@@ -14,7 +14,7 @@
 
 @media (max-width: 798px) {
   :root {
-    --primary-heading: 40px;
+    --primary-heading: 36px;
     --secondary-heading: 22px;
     --small-text: 18px;
     --link-text: 16px;
@@ -22,7 +22,7 @@
 }
 @media (max-width: 548px) {
   :root {
-    --primary-heading: 32px;
+    --primary-heading: 28px;
     --secondary-heading: 20px;
     --small-text: 16px;
     --link-text: 14px;
@@ -239,10 +239,12 @@ section {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+  mix-blend-mode: color-dodge;
 }
 .hero .hero-img {
   width: 100%;
   position: relative;
+  filter: brightness(0.8);
 }
 .hero .hero-img img {
   height: 550px;
@@ -380,7 +382,7 @@ section {
 
 .faq-sec .container .grid {
   align-items: start;
-  gap: 20vh;
+  gap: 20vw;
 }
 .faq-sec .container .grid .flex {
   align-items: flex-start;
@@ -572,6 +574,9 @@ section {
   .projects .container .grid {
     gap: 1.3em;
   }
+  .faq-sec .container .grid {
+    gap: 2em;
+  }
   .cta {
     height: 100vh;
   }
@@ -583,6 +588,9 @@ section {
   .button {
     width: 60% !important;
   }
+  section {
+    margin: 3em 0;
+  }
   .primary-header .nav-wrapper .nav-logo {
     width: 40%;
   }
@@ -590,7 +598,7 @@ section {
     display: none;
   }
   .hero {
-    margin: 3em 0;
+    margin-top: 1em;
   }
   .hero .hero-heading {
     font-size: 7vw;
@@ -598,6 +606,9 @@ section {
   }
   .hero .container {
     margin-top: 2em;
+  }
+  .about .container .grid {
+    gap: 1em;
   }
   .projects .container .grid {
     grid-template-columns: 1fr;
@@ -610,9 +621,6 @@ section {
   }
   .primary-header .nav-wrapper .nav-logo {
     width: 30%;
-  }
-  .hero {
-    margin: 3em 0;
   }
   .hero .hero-heading {
     top: 7px;
@@ -631,10 +639,10 @@ section {
     align-items: start;
   }
   .faq-sec .container .grid .flex .faq-body {
-    width: 25ch;
+    width: 30ch;
   }
   .cta .container .grid .flex .cta-body {
-    width: 25ch;
+    width: 30ch;
   }
   .footer .container .grid {
     grid-template-columns: 1fr;
