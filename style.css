@@ -231,7 +231,7 @@ section {
   margin-top: 20vh;
 }
 .hero .hero-heading {
-  font-family: "Stencil";
+  font-family: "Stardos Stencil";
   font-size: 50px;
   text-align: center;
   position: fixed;
@@ -275,8 +275,19 @@ section {
   gap: 2rem;
   margin-bottom: 2.3em;
 }
-.about .container .grid .about-img img {
+.about .container .grid .about-img {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  width: 500px;
   border-radius: 10px;
+}
+.about .container .grid .about-img img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 .about .container .grid .about-head {
   font-family: var(--ff-heading);
@@ -349,6 +360,7 @@ section {
   position: relative;
   height: 300px;
   overflow: hidden;
+  transition: all 0.5s;
 }
 .projects .container .grid .project .proj-img img {
   position: absolute;
@@ -357,13 +369,9 @@ section {
   object-fit: cover;
   overflow: hidden;
   border-radius: 10px;
-  transition: transform 0.8s ease-in;
 }
 .projects .container .grid .project .proj-img:hover, .projects .container .grid .project .proj-img:focus {
   border-radius: 20px;
-}
-.projects .container .grid .project .proj-img:hover img {
-  transform: scale(1.1);
 }
 .projects .container .grid .project .proj-name {
   font-family: var(--ff-heading);
@@ -450,7 +458,7 @@ section {
   margin-bottom: 0;
   height: 60vh;
   position: relative;
-  background: linear-gradient(to right, rgba(17, 17, 17, 0.7), rgba(0, 0, 0, 0)), url("./assets/cta.jpg");
+  background: linear-gradient(to right, rgba(17, 17, 17, 0.7), rgba(0, 0, 0, 0)), url("./assets/cta.jpg") no-repeat;
 }
 .cta .container {
   padding: 3em 0 0 0;
@@ -515,7 +523,8 @@ section {
   align-items: baseline;
 }
 .footer .container .grid .flex .brand {
-  font-family: "Stencil";
+  font-family: "Stardos Stencil";
+  text-transform: uppercase;
   font-size: 50px;
   line-height: 1;
 }
@@ -640,6 +649,9 @@ section {
   }
   .faq-sec .container .grid .flex .faq-body {
     width: 30ch;
+  }
+  .cta {
+    height: 80vh;
   }
   .cta .container .grid .flex .cta-body {
     width: 30ch;

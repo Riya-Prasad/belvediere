@@ -249,7 +249,7 @@ section {
   margin-top: 20vh;
 
   .hero-heading {
-    font-family: "Stencil";
+    font-family: "Stardos Stencil";
     font-size: 50px;
     text-align: center;
     position: fixed;
@@ -297,8 +297,18 @@ section {
       gap: 2rem;
       margin-bottom: 2.3em;
       .about-img {
+        position: relative;
+        overflow: hidden;
+        height: 350px;
+        width: 500px;
+        border-radius: 10px;
+
         img {
-          border-radius: 10px;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          overflow: hidden;
         }
       }
       .about-head {
@@ -374,6 +384,7 @@ section {
           position: relative;
           height: 300px;
           overflow: hidden;
+          transition: all 0.5s;
 
           img {
             position: absolute;
@@ -382,16 +393,11 @@ section {
             object-fit: cover;
             overflow: hidden;
             border-radius: 10px;
-            transition: transform 0.8s ease-in;
           }
 
           &:hover,
           &:focus {
             border-radius: 20px;
-          }
-
-          &:hover img {
-            transform: scale(1.1);
           }
         }
 
@@ -495,7 +501,7 @@ section {
   height: 60vh;
   position: relative;
   background: linear-gradient(to right, rgba(17, 17, 17, 0.7), rgb(0 0 0 / 0)),
-    url("./assets/cta.jpg");
+    url("./assets/cta.jpg") no-repeat;
 
   .container {
     padding: 3em 0 0 0;
@@ -565,7 +571,8 @@ section {
       .flex {
         align-items: baseline;
         .brand {
-          font-family: "Stencil";
+          font-family: "Stardos Stencil";
+          text-transform: uppercase;
           font-size: 50px;
           line-height: 1;
         }
@@ -763,6 +770,7 @@ section {
   }
 
   .cta {
+    height: 80vh;
     .container {
       .grid {
         .flex {
