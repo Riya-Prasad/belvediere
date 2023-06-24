@@ -1,8 +1,8 @@
-var image = document.getElementsByClassName("ifour");
+var image = document.getElementsByClassName("parallax-img");
 new simpleParallax(image, {
-  scale: 1.4,
-  delay: 0.3,
-  transition: "cubic-bezier(0,0,0,1)",
+  scale: 1.3,
+  delay: 0.5,
+  transition: "cubic-bezier(0,0,0,0.4)",
 });
 
 // faq

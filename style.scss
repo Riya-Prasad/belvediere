@@ -15,6 +15,28 @@
   --link-color: #a8a7a7;
 }
 
+@media (max-width: 798px) {
+  :root {
+    --primary-heading: 40px;
+    --secondary-heading: 22px;
+    --small-text: 18px;
+    --link-text: 16px;
+  }
+}
+
+@media (max-width: 548px) {
+  :root {
+    --primary-heading: 32px;
+    --secondary-heading: 20px;
+    --small-text: 16px;
+    --link-text: 14px;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -44,6 +66,7 @@ html,
 body {
   min-height: 100%;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 /* Set core body defaults */
@@ -174,12 +197,16 @@ section {
     justify-content: space-between;
     align-items: center;
 
+    .nav-logo {
+      width: 50%;
+    }
+
     .primary-nav {
       .nav-list {
         font-family: var(--ff-heading);
         font-size: var(--link-text);
         display: flex;
-        gap: clamp(1rem, 5vw, 2rem);
+        gap: clamp(1rem, 3.5vw, 2rem);
         a {
           color: var(--link-color);
           text-decoration: none;
@@ -255,7 +282,7 @@ section {
       margin: 1em 0;
     }
     .button {
-      width: 27%;
+      width: 35%;
     }
   }
 }
@@ -293,8 +320,9 @@ section {
             font-family: var(--ff-heading);
             color: var(--heading-color);
           }
-          .number-details {
+          .num-details {
             font-size: var(--link-text);
+            text-align: center;
           }
         }
       }
@@ -379,7 +407,7 @@ section {
     }
     .button {
       margin-inline: auto;
-      width: 27%;
+      width: 35%;
     }
   }
 }
@@ -510,6 +538,7 @@ section {
           color: #fff;
           background: transparent;
           margin: 1.2em 0;
+          mix-blend-mode: color-dodge;
         }
         .button {
           width: 100%;
@@ -541,7 +570,7 @@ section {
         .socials {
           display: flex;
           justify-content: space-between;
-          width: 37.5%;
+          gap: 2em;
           span {
             font-size: var(--link-text);
             color: var(--link-color);
@@ -570,6 +599,180 @@ section {
             &:focus {
               color: #fff;
             }
+          }
+        }
+        span {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+// media queries
+@media (max-width: 798px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    .hero-heading {
+      font-size: 5vw;
+      top: 13px;
+    }
+  }
+  .about {
+    .container {
+      .grid {
+        .about-img {
+          img {
+            width: 100%;
+            height: 50vh;
+            object-fit: contain;
+          }
+        }
+      }
+      .about-desc {
+        .about-body {
+          max-width: 65ch;
+        }
+      }
+    }
+  }
+
+  .projects {
+    .container {
+      .grid {
+        gap: 1.3em;
+      }
+    }
+  }
+  .cta {
+    height: 100vh;
+  }
+  .footer {
+    .container {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 548px) {
+  .button {
+    width: 60% !important;
+  }
+  .primary-header {
+    .nav-wrapper {
+      .nav-logo {
+        width: 40%;
+      }
+    }
+  }
+
+  .primary-header {
+    .nav-wrapper {
+      .primary-nav {
+        display: none;
+      }
+    }
+  }
+
+  .hero {
+    margin: 3em 0;
+    .hero-heading {
+      font-size: 7vw;
+      top: 13px;
+    }
+    .container {
+      margin-top: 2em;
+    }
+  }
+  .projects {
+    .container {
+      .grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 448px) {
+  .button {
+    width: 100% !important;
+  }
+
+  .primary-header {
+    .nav-wrapper {
+      .nav-logo {
+        width: 30%;
+      }
+    }
+  }
+  .hero {
+    margin: 3em 0;
+    .hero-heading {
+      top: 7px;
+    }
+  }
+
+  .about {
+    margin-top: 1em;
+    .container {
+      .grid {
+        margin-bottom: 1em;
+        .numbers {
+          grid-template-columns: repeat(2, 1fr);
+          max-width: max-content;
+          .number {
+            align-items: start;
+          }
+        }
+      }
+    }
+  }
+
+  .faq-sec {
+    .container {
+      .grid {
+        .flex {
+          .faq-body {
+            width: 25ch;
+          }
+        }
+      }
+    }
+  }
+
+  .cta {
+    .container {
+      .grid {
+        .flex {
+          .cta-body {
+            width: 25ch;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      .grid {
+        grid-template-columns: 1fr;
+        span {
+          margin-top: 1em;
+        }
+        .links {
+          align-items: flex-start;
+          .footer-nav-list {
+            text-align: left;
+          }
+          span {
+            margin: 2em auto 0;
+            text-align: center;
           }
         }
       }
