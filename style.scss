@@ -643,7 +643,7 @@ section {
       }
       .about-desc {
         .about-body {
-          max-width: 65ch;
+          width: 65ch;
         }
       }
     }
@@ -724,9 +724,6 @@ section {
 }
 
 @media (max-width: 448px) {
-  .button {
-    width: 100% !important;
-  }
 
   .primary-header {
     .nav-wrapper {

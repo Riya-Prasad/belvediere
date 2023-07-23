@@ -578,7 +578,7 @@ section {
     object-fit: contain;
   }
   .about .container .about-desc .about-body {
-    max-width: 65ch;
+    width: 65ch;
   }
   .projects .container .grid {
     gap: 1.3em;
@@ -625,9 +625,6 @@ section {
   }
 }
 @media (max-width: 448px) {
-  .button {
-    width: 100% !important;
-  }
   .primary-header .nav-wrapper .nav-logo {
     width: 30%;
   }
