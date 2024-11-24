@@ -73,7 +73,8 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -105,7 +106,7 @@ body {
 }
 
 p {
-  max-width: 50ch;
+  max-width: 60ch;
 }
 
 /* Utility classes */
@@ -249,7 +250,8 @@ section {
 .hero .hero-img img {
   height: 550px;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero .container {
   margin-top: 6em;
@@ -286,7 +288,8 @@ section {
   position: absolute;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
 }
 .about .container .grid .about-head {
@@ -366,7 +369,8 @@ section {
   position: absolute;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -649,6 +653,7 @@ section {
   }
   .about .container .grid .numbers {
     grid-template-columns: repeat(2, 1fr);
+    max-width: -moz-max-content;
     max-width: max-content;
   }
   .about .container .grid .numbers .number {

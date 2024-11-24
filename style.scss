@@ -113,7 +113,7 @@ body {
 }
 
 p {
-  max-width: 50ch;
+  max-width: 60ch;
 }
 
 /* Utility classes */
@@ -500,7 +500,8 @@ section {
   margin-bottom: 0;
   height: 60vh;
   position: relative;
-  background: linear-gradient(to right, rgba(17, 17, 17, 0.7), rgb(0 0 0 / 0)),
+  background:
+    linear-gradient(to right, rgba(17, 17, 17, 0.7), rgb(0 0 0 / 0)),
     url("./assets/cta.jpg") no-repeat;
 
   .container {
@@ -676,7 +677,7 @@ section {
           height: 200px;
           width: 100%;
         }
-        .button{
+        .button {
           width: 50%;
         }
       }
